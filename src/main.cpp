@@ -35,7 +35,7 @@ int chatodePin[4] = {D1, D2, D3, D4};
 
 void allLow(int pins[7])
 {
-  for (int i = 0; i < 6; i++)
+  for (int i = 0; i < 7; i++)
   {
     digitalWrite(pins[i + 1], LOW);
   }
@@ -43,7 +43,7 @@ void allLow(int pins[7])
 
 void segmentView(int digit[10][7], int num)
 {
-  for (int i = 0; i < 6; i++)
+  for (int i = 0; i < 7; i++)
   {
     digitalWrite(digit[num][i + 1], HIGH);
   }
@@ -59,7 +59,7 @@ void numCalc(int num)
 
   do
   {
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 4; i++)
     {
       segmentView(numbers, digit[i + 1]);
       digitalWrite(chatodePin[i + 1], LOW);
